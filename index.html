@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Acqua</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+        rel="stylesheet"
+    />
 
+    <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
@@ -42,31 +43,56 @@
             </section>
 
             <section class="info newsletter">
-                <h2 id="teste">Prédio Acqua</h2>
-                <p> Receba novidade sobre nosso lançamento.</p>
+                <h2>Prédio Acqua</h2>
+                <p> Receba novidades sobre nosso lançamento.</p>
                 <p>
                     Morar contemporâneo para pessoas com estilo de vida dinâmico e que buscam praticidade no seu dia a
                     dia.
                     Lazer, esporte, trabalho e contato com a natureza em um só lugar.
                 </p>
                 <form>
-                    <label for="email">Digite seu e-mail</label>
-                    <input type="email" name="email" id="email" />
+                    <label for="email" class="sr-only">Digite seu e-mail</label>
+                    <input 
+                    type="email" 
+                    placeholder="Digite seu e-mail" name="email" 
+                    id="email" 
+                    />
                     <button type="submit">Quero saber mais</button>
                 </form>
             </section>
         </div>
-        <section>
+
+        <section claa="andamento">
             <h2>Andamento do projeto</h2>
-            <p>Veja como está o andamento da construção</p>
-            <img src="assets/images/predio1.png" alt="Imagem da construção do Prédio Acqua" />
-            <img src="assets/images/predio2.png" alt="Imagem da construção do Prédio Acqua" />
-            <img src="assets/images/predio3.png" alt="Imagem da construção do Prédio Acqua" />
-            <img src="assets/images/predio4.png" alt="Imagem da construção do Prédio Acqua" />
-            <img src="assets/images/predio5.png" alt="Imagem da construção do Prédio Acqua" />
-            <img src="assets/images/predio6.png" alt="Imagem da construção do Prédio Acqua" />
+            <p> Veja como está o andamento da construção</p>
+
+            <div class="galeria">
+
+                <img 
+                src="assets/images/predio1.png" alt="Imagem da construção do Prédio Acqua" 
+                />
+
+                <img 
+                src="assets/images/predio2.png" alt="Imagem da construção do Prédio Acqua" 
+                />
+
+                <img 
+                src="assets/images/predio3.png" alt="Imagem da construção do Prédio Acqua" 
+                />
+
+                <img 
+                src="assets/images/predio4.png" alt="Imagem da construção do Prédio Acqua" 
+                />
+
+                <img 
+                src="assets/images/predio5.png" alt="Imagem da construção do Prédio Acqua" 
+                />
+
+                <img 
+                src="assets/images/predio6.png" alt="Imagem da construção do Prédio Acqua" 
+                />
+            </div>
         </section>
     </main>
 </body>
-
 </html>
