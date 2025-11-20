@@ -1,180 +1,213 @@
 :root {
-    --cor-dark: #111111;
-    --cor-light: #ffffff;
-    --cor-grey: #f1f1f1;
-    --cor-dark-blue: #34495e;
-    --cor-light-blue: #3498db;
-    --cor-dark-grey: #bbbbbb;
+  --cor-dark: #111111;
+  --cor-light: #ffffff;
+  --cor-grey: #f1f1f1;
+  --cor-borda: #bbbbbb;
+  --cor-dark-blue: #34495e;
+  --cor-light-blue: #3498db;
 
-    font-family: nunito, sans-serif;
+  --font-family: "Poppins", sans-serif;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    font-family: var(--font-family);
-    background-color: var(--cor-light);
+  font-family: var(--font-family);
+  background-color: var(--cor-light);
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-
+  display: flex;
+  flex-direction: column;
 }
 
 .info {
-    height: 90vh;
+  height: 90vh;
 }
 
 .overlay {
-    background-image: url(./assets/images/predio5.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  background-image: url("./assets/images/predio5.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .lancamento {
-    background-color: #11111165;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  background-color: #11111165;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .lancamento p {
-    text-align: center;
-    color: var(--cor-light);
-    font-weight: 500;
-    text-shadow: 5px 5px 10px var(--cor-dark);
+  text-align: center;
+  color: var(--cor-light);
+  font-weight: 500;
+  text-shadow: 5px 5px 10px var(--cor-dark);
 }
 
 .lancamento p span {
-    font-size: 2.5rem;
-    font-weight: 700;
+  font-size: clamp(2.5rem, 10vw, 3.5rem);
+  font-weight: 700;
 }
 
-/* 1rem = 16px
-   2.5rem = 32px 
-   3rem= 48px
-   4rem = 64px
-*/
-
 .newsletter {
-    background-color: var(--cor-grey);
+  background-color: var(--cor-grey);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   text-align: center;
+
   padding: 0 1rem;
 }
 
 .newsletter h2 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    background: linear-gradient(to right,
-            var(--cor-dark-blue),
-            var(--cor-light-blue));
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+  font-size: clamp(2rem, 6vw, 2.5rem);
+
+  margin-bottom: 0.5rem;
+  background: linear-gradient(
+    to right,
+    var(--cor-dark-blue),
+    var(--cor-light-blue)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-.newsletter h2 + p{
-    font-weight: 600;
-    font-style: italic;
-    font-size: 0.875rem;
-    margin-bottom: 1rem;
+.newsletter p {
+  font-size: clamp(0.875rem, 5vw, 1rem);
 }
 
-.newsletter p + p{
-    font-size: 0,875rem;
-    margin-bottom: 2rem;
+.newsletter h2 + p {
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 1rem;
 }
 
-.newsletter form{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 1rem;
+.newsletter p + p {
+  margin-bottom: 2rem;
+  max-width: 75ch;
 }
 
-.sr-only{
-    position: absolute;
-    clip: rect(0, 0, 0, 0) ;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    border: 0;
-    margin: -1px;
+.newsletter form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
 }
 
-.newsletter form{
-    max-width: 25rem;
+.sr-only {
+  position: absolute;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(0, 0, 0, 0);
 }
 
-.newsletter form input, .newsletter form button{
-    height: 3rem;
-    border-radius: 3.5rem;
+.newsletter form {
+  max-width: 25rem;
 }
 
-.newsletter form input{
-    border: 1px solid var(--cor-dark-grey);
-    padding: 0.875rem 1rem;
-    font-size: 1rem;
+.newsletter form input,
+.newsletter form button {
+  height: 3rem;
+  border-radius: 3.5rem;
 }
 
-.newsletter form button{
-    border: 0;
-    background: linear-gradient(90deg, var(--cor-dark-blue), var(--cor-light-blue));
-    font-weight: 500;
-    color: var(--cor-light);
-    font-size: 1rem;
-    cursor: pointer;
+.newsletter form input {
+  border: 1px solid var(--cor-borda);
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
 }
 
-.andamento{
-    padding: 4.75rem 1rem 1rem 1rem;
+.newsletter form button {
+  border: none;
+  background: linear-gradient(
+    90deg,
+    var(--cor-dark-blue),
+    var(--cor-light-blue)
+  );
+
+  font-weight: 500;
+  color: var(--cor-light);
+  font-size: 1rem;
+  cursor: pointer;
 }
 
-.andamento h2, .andamento p{
-    text-align: center;
+.andamento {
+  padding: 4.75rem 1rem 1rem 1rem;
 }
 
-.andamento h2{
-font-size: 1.75rem;
-margin-bottom: 0.25rem;
+.andamento h2,
+.andamento p {
+  text-align: center;
 }
 
-.andamento p{
-    font-size: 0.875rem;
+.andamento h2 {
+  /* clamp(valor minimo, ideal, valor máximo) */
+  font-size: clamp(1.75rem, 6vw, 2.25rem);
+  margin-bottom: 0.25rem;
 }
 
-.andamento img{
-    max-width:47%;
-    transition: transform 200ms ease-in;
+.andamento p {
+  font-size: clamp(0.875rem, 6vw, 1.125rem);
+}
+
+.andamento img {
+  max-width: 47%;
+  transition: transform 200ms ease-in;
 }
 
 .galeria {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.75rem;
 }
 
-.galeria img:hover{
-    transform: scale(1.05);
-    /* 105% */
+.galeria img:hover {
+  transform: scale(1.05);
+  /* 105% */
+}
+
+/*
+regra css 
+@media (condição) {
+  estilos que serão aplicado caso a condição seja verdadeira/válida
+} 
+*/
+
+@media (min-width: 744px) {
+  .andamento img {
+    max-width: 31%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .info-container {
+    display: flex;
+  }
+
+  .info-container section {
+    width: 100%;
+    max-width: 50%;
+  }
 }
